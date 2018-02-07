@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+
+.topmenu {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 175%;
+}
+
+.title {
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 30%;
+  font-family: Helvetica;
+  color: white;
+  text-align: center;
+  margin-right: -3px;
+  margin-top: -3px;
+  margin-left: auto;
+  font-size: 125%;
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+.menu {
+  background-color: grey;
+  position: relative;
+  padding: 2px;
+  border: 1px solid black;
+  margin: 0.2%;
+}
+
+#chicken {
+  background-color: red;
+}
+
+#beef {
+  background-color: blue;
+}
+
+#sushi {
+  background-color: yellow;
+  color: black;
+}
+/*.text {
+  position: relative;
+  top: 50px;
+}*/
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  .col-md-4 {
+    width: 32.9%;
+  }
+}
+
+/********** for Tablets **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  .col-sm-6 {
+    width: 49.6%;
+  }
+  .col-sm-12 {
+    width: 99.6%;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="topmenu">Our Menu</div>
+
+<div class="row">
+  <div class="col-md-4 col-sm-6 menu">
+    <div id="chicken" class="title">Chicken</div>
+    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6 menu">
+    <div id="beef" class="title">Beef</div>
+    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12 menu">
+    <div id="sushi" class="title">Sushi</div>
+    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
